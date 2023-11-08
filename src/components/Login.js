@@ -1,4 +1,5 @@
-import { useState,useNavigate } from "react";
+import { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 
 export default function Login()
 {
@@ -45,13 +46,13 @@ export default function Login()
     onClick={(e)=>{
       e.preventDefault();
       console.log(loginUser,loginPassword);
-      if(loginPassword==password && loginUser==username){
+      if(loginPassword===password && loginUser===username){
         navigate("success")
       }
-      else if(loginUser!=username){
+      else if(loginUser!==username){
         document.getElementById("username").classList.add("red");
       }
-      else if(loginPassword!=password){
+      else if(loginPassword!==password){
         document.getElementById("password").classList.add("red");
       }
     }}
