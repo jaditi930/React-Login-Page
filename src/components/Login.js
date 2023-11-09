@@ -56,11 +56,9 @@ export default function Login()
       }
       else {
       if(loginUser!==username){
-        // document.getElementById("username").classList.add("red");
         setuserbox("red")
       }
       if(loginPassword!==password){
-        // document.getElementById("password").classList.add("red");
         setpbox("red")
       }
     }
